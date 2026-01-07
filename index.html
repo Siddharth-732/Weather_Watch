@@ -7,14 +7,28 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
     
 </head>
-<body style="background-color: darkslategrey;">
+<body>
     <div class="app-container">
+        <!-- Side_Bar -->
         <aside id="sidebar">
-            <div class="sidebar_header">
+            <div class="sidebar-header">
                 <h2>Weather</h2>
-                <button id="close_button"></button>
+                <button class="toggle_btn">Click</button>
             </div>
+            <div class="search_box">
+                <input type="text" placeholder="Search city...">
+            </div>
+            <ul class="search-results">
+                <li>Delhi</li>
+                <li>Mumbai</li>
+                <li>Pune</li>
+            </ul>
         </aside>
+        <!-- Main content -->
+         <main id="main">
+            <h1 id="cityname">Your Location</h1>
+         </main>
     </div> 
 </body>
 </html>
+,
