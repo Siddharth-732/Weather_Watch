@@ -15,12 +15,14 @@ body {
 }
 .sidebar-header{
     display: flex;
-    margin-top: 1vh;
+    margin-top: 3vh;
     padding-left: 5vh;
     gap: 15vh;
+    padding-bottom: 20px;
     /* padding-inline-start: 10vh; */
 }
 #sidebar {
+    white-space: nowrap;
   width: 300px;              /* fixed width */
   background-color: #1e1e2f;
   color: white;
@@ -29,7 +31,7 @@ body {
 }
 
 #sidebar.collapsed {
-    width: 0px;
+    width: 10px;
 }
 
 #main {
