@@ -1,3 +1,4 @@
+/*Universal*/
 * {
   margin: 0;
   padding: 0;
@@ -10,21 +11,12 @@ body {
   background: #f4f6fa;
 }
 
-
+/*The entire app container*/
 .app-container {
   display: flex;
   min-height: 100vh;
 }
-.search_box{
-  padding-bottom: 5vh;
-}
-.sidebar-header{
-    display: flex;
-    margin-top: 3vh;
-    padding-left: 4vh;
-    gap: 15vh;
-    padding-bottom: 20px;
-}
+/* Sidebar related */
 #sidebar {
   padding-left: 6vh;
   white-space: nowrap;
@@ -35,11 +27,16 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+.sidebar-header{
+    display: flex;
+    margin-top: 3vh;
+    padding-left: 4vh;
+    gap: 15vh;
+    padding-bottom: 20px;
+}
 #sidebar.collapsed {
     width: 50px;
 }
-
 .sidebar-content,
 .sidebar-text {
   transition: opacity 0.2s ease;
@@ -50,15 +47,12 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-.toggle_btn {
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  z-index: 10;
-  cursor: pointer;
-}
 #sidebar.collapsed:hover {
   width: 70px;
+}
+/* Search Box */
+.search_box{
+  padding-bottom: 5vh;
 }
 .search_box input {
   width: 90%;
@@ -69,29 +63,34 @@ body {
   margin: 16px 0;
   font-size: 14px;
 }
-
 .search-results {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .search-results li {
   padding: 10px 12px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
-
 .search-results li:hover {
   background: rgba(255,255,255,0.1);
 }
 
+/* Toggle button */
+.toggle_btn {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+/*The right side of the sidebar starts here*/
 #main {
   flex: 1;
   padding: 32px;
 }
-
 #cityname {
   font-size: 32px;
   margin-bottom: 24px;
@@ -121,8 +120,7 @@ body {
 #sidebar.collapsed {
   box-shadow: 2px 0 10px rgba(0,0,0,0.2);
 }
-
-
+/* Chat bot */
 #chatbotBtn {
     position: fixed;
     bottom: 20px;
