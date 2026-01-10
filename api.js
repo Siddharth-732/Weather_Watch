@@ -1,4 +1,4 @@
-const API_KEY = "dd99dfc5fd7178997d3e321cad4b2e5d";
+const API_KEY = "dd99dfc5fd7178997d3e321cad4b2e5d"; 
 
 async function fetchWeather(url) {
   try {
@@ -14,7 +14,8 @@ async function fetchWeather(url) {
     alert(error.message);
   }
 }
-
+// This function gives the weather data of the user exact location
+// When the page loads it gives the default user location weather data
 function getUserLocationWeather() {
   navigator.geolocation.getCurrentPosition(
     (position) => {
@@ -25,7 +26,8 @@ function getUserLocationWeather() {
     () => alert("Location access denied")
   );
 }
-
+// This is for the search
+// This allows weather data from different location to be reflected on the UI
 function getCityWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
   fetchWeather(url);

@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeatherWatch</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  </head>
+  <body>
     <div class="app-container">
-        <!-- Side_Bar -->
-        <aside id="sidebar">
-            <div class="sidebar-header">
-                <h2 class="sidebar-text">Weather</h2>
-                <button class="toggle_btn">☰</button>
-            </div>
-            <div class="sidebar-content">   
-                <div class="search_box">
-                    <input type="text" placeholder="Search city...">
-                </div>
-                <ul class="search-results">
-                    <li>Delhi</li>
-                    <li>Mumbai</li>
-                    <li>Pune</li>
-                </ul>
-            </div>
-        </aside>
-        <!-- Main content -->
-         <main id="main">
-            <h1 id="cityname">Your Location</h1>
+      <!-- Side_Bar -->
+      <aside id="sidebar">
+        <div class="sidebar-header">
+          <h2 class="sidebar-text">Weather</h2>
+          <button class="toggle_btn">☰</button>
+        </div>
+        <div class="sidebar-content">
+          <div class="search_box">
+            <input type="text" placeholder="Search city..." />
+          </div>
+          <ul class="search-results">
+            <li>Delhi</li>
+            <li>Mumbai</li>
+            <li>Pune</li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Main content -->
+      <main id="main">
+        <h1 id="cityname">Your Location</h1>
 
-            <div class="cards">
-                <div class="card">Temp: <span id="temp">XX</span></div>
-                <div class="card">Wind <span id="wind">XX</span></div>
-                <div class="card">Humidity <span id="humidity">XX</span></div>
-                <div class="card">AQI <span id="aqi">XX</span></div>
-            </div>
-         </main>
-
-         <!-- Chatbot -->
-        <button id="chatbot">Lina</button>     
-        <script src="api.js"></script>
-         <script src="script.js"></script>
-    </div> 
-</body>
+        <div class="cards">
+          <div class="card">🌡️ Temp: <span id="temp">XX</span></div>
+          <div class="card">💨 Wind: <span id="wind">XX</span></div>
+          <div class="card">💧 Humidity: <span id="humidity">XX</span></div>
+          <div class="card">☀️ Condition: <span id="weather">XX</span></div>
+        </div>
+      </main>
+    </div>
+    <!-- Chatbot -->
+    <div class="chatbot_lena">
+      <button id="chatbot">Lina</button>
+      <script src="api.js"></script>
+      <script src="script.js"></script>
+    </div>
+  </body>
 </html>
 ,

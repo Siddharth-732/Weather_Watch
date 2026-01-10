@@ -5,11 +5,19 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
-  background: #f4f6fa;
+:root {
+  --bg-gradient: linear-gradient(135deg, #0f766e, #06b6d4);
+  --card-bg: rgba(255, 255, 255, 0.18);
+  --card-border: rgba(255, 255, 255, 0.25);
+  --text-dark: #0f172a;
+  --text-light: #e5e7eb;
+  --accent: #38bdf8;
 }
+
+body {
+  background: var(--bg-gradient);
+}
+
 
 /*The entire app container*/
 .app-container {
@@ -77,6 +85,15 @@ body {
 .search-results li:hover {
   background: rgba(255,255,255,0.1);
 }
+.search-results li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-results li::before {
+  content: "📍";
+}
 
 /* Toggle button */
 .toggle_btn {
@@ -98,17 +115,21 @@ body {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
   gap: 20px;
 }
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  font-size: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  color: var(--text-dark);
+  padding: 50px;
+  border-radius: 18px;
+  font-size: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.12);
@@ -117,12 +138,28 @@ body {
   font-weight: 600;
   color: #2563eb;
 }
+/* Instead of snapping the values this add animation when the city data changes */
+.card.fade {
+  animation: fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #sidebar.collapsed {
   box-shadow: 2px 0 10px rgba(0,0,0,0.2);
 }
 /* Chat bot */
 #chatbotBtn {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     padding: 1rem;
