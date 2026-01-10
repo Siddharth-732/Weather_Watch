@@ -158,10 +158,32 @@ body {
   box-shadow: 2px 0 10px rgba(0,0,0,0.2);
 }
 /* Chat bot */
-#chatbotBtn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 50%;
+.chatbot_lena {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#chatbot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#chatbot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+#chatbot:active {
+  transform: scale(0.95);
 }
